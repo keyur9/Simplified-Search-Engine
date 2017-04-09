@@ -19,6 +19,8 @@ Files Included: INPUT FILE : doc1.txt and doc2.txt
 from collections import Counter
 _WORD_MIN_LENGTH = 3
 cnt = Counter()
+import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 cacheStopwords = stopwords.words('english')
 
