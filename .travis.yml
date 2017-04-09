@@ -4,5 +4,10 @@ python:
 cache: pip
 install:
   - pip install -r requirements.txt
+  - pip install codecov
 script:
   - python Search_Engine.py
+after_success:
+  - coverage run Search_Engine.py
+  - codecov
+  - bash <(curl -s https://codecov.io/bash)
